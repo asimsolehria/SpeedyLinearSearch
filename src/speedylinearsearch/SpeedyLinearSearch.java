@@ -11,28 +11,27 @@ public class SpeedyLinearSearch {
     {
         int start=0;
         int end=array.length-1;
-        
-        
-        int foundIndex=-1;
-        
-        while(start!=end)
+        int mid=(start+end)/2;
+        int founIndex=-1;
+        while(start<=mid && end>=mid)
         {
             if(array[start]==value)
-            {
-                foundIndex=start;
+            {   
+                founIndex=start;
                 break;
             }
             if(array[end]==value)
             {
-                foundIndex=end;
+                founIndex=end;
                 break;
             }
+            
             start++;
             end--;
             
         }
         
-        return foundIndex;
+        return founIndex;
     }
     
 }
